@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://73rhm40f24qm"]
+
+[ext_resource type="Script" path="res://world.gd" id="1_io200"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_1f6sm"]
+
+[node name="level" type="Node3D"]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.918729, 0.394888, 0, -0.394888, 0.918729, 0, 48.1211, 65.5508)
+current = true
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.56906, 0)
+omni_range = 26.1582
+
+[node name="World" type="Node3D" parent="." node_paths=PackedStringArray("player")]
+script = ExtResource("1_io200")
+player = NodePath("../MeshInstance3D")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_1f6sm")
+
+[node name="Test" type="Test" parent="."]

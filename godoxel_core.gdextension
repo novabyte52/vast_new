@@ -1,0 +1,14 @@
+[configuration]
+entry_symbol = "gdext_rust_init"
+compatibility_minimum = 4.1
+reloadable = true
+
+[libraries]
+linux.debug.x86_64 =     "res://../godoxel-core/target/debug/libgodoxel_core.so"
+linux.release.x86_64 =   "res://../godoxel-core/target/release/libgodoxel_core.so"
+windows.debug.x86_64 =   "res://../godoxel-core/target/debug/godoxel_core.dll"
+windows.release.x86_64 = "res://../godoxel-core/target/release/godoxel_core.dll"
+macos.debug =            "res://../godoxel-core/target/debug/libgodoxel_core.dylib"
+macos.release =          "res://../godoxel-core/target/release/libgodoxel_core.dylib"
+macos.debug.arm64 =      "res://../godoxel-core/target/debug/libgodoxel_core.dylib"
+macos.release.arm64 =    "res://../godoxel-core/target/release/libgodoxel_core.dylib"
